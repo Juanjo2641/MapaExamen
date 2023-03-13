@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Examen APP MALAGA-ARQUEOLOGICA</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body> 
+  <div id="container">
+    
+      <table class="col-3 p-0" id="listado">
+        <thead></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="w-100 h-100 border" id="mapid"></div>
+    <div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <script src="js/app.js"></script>
+
+
+  <script>
+    var map = L.map('mapid').setView([36.7201600, -4.4203400], 15);
+
+    // crea una capa de OpenStreetMap y agrégala al mapa
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+  </script>
+
+</body>
+
+</html>
+
+
